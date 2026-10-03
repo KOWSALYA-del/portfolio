@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kowsalya S — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1b2430;
+    --paper:#f6f3ec;
+    --card:#ffffff;
+    --navy:#1F3864;
+    --amber:#c97a2b;
+    --line:#dcd6c8;
+    --muted:#6b7280;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#ecebe6; --paper:#15181d; --card:#1c2128; --navy:#9fb4da; --amber:#e3a35e; --line:#2b313a; --muted:#9aa2ad;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#ecebe6; --paper:#15181d; --card:#1c2128; --navy:#9fb4da; --amber:#e3a35e; --line:#2b313a; --muted:#9aa2ad;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif; line-height:1.55;
+  }
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif; margin:0; font-weight:600;}
+  .wrap{max-width:860px; margin:0 auto; padding:0 24px;}
+  header.hero{padding:72px 0 56px; border-bottom:1px solid var(--line);}
+  .eyebrow{color:var(--amber); font-size:0.95rem; margin-bottom:10px;}
+  h1{font-size:clamp(2.2rem,5vw,3.4rem); line-height:1.08; max-width:14ch;}
+  .role{font-size:1.15rem; color:var(--muted); margin-top:14px; max-width:46ch;}
+  .contact-row{margin-top:28px; display:flex; flex-wrap:wrap; gap:18px; font-size:0.95rem;}
+  .contact-row a{color:var(--navy); text-decoration:none; border-bottom:1px solid var(--line);}
+  .contact-row a:hover{border-color:var(--navy);}
+
+  section{padding:48px 0; border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  h2{font-size:1.5rem; margin-bottom:22px;}
+
+  .skills{display:flex; flex-wrap:wrap; gap:10px;}
+  .skill{background:var(--card); border:1px solid var(--line); border-radius:7px; padding:7px 14px; font-size:0.9rem;}
+
+  .projects{display:grid; gap:20px;}
+  .project{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:26px;}
+  .project h3{font-size:1.25rem; margin-bottom:6px;}
+  .project .stack{color:var(--amber); font-size:0.88rem; margin-bottom:12px;}
+  .project p{color:var(--ink); margin:0 0 14px;}
+  .project a{color:var(--navy); font-weight:600; text-decoration:none; font-size:0.92rem;}
+  .project a:hover{text-decoration:underline;}
+
+  .edu-item{margin-bottom:18px;}
+  .edu-item .school{color:var(--muted); font-size:0.92rem;}
+
+  footer{padding:36px 0 56px; color:var(--muted); font-size:0.9rem;}
+
+  @media (max-width:560px){
+    header.hero{padding:52px 0 40px;}
+    section{padding:36px 0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Computer Science Engineering · Software Developer</div>
+    <h1>Kowsalya S</h1>
+    <p class="role">Builds full-stack web applications with Python and Django, and explores practical machine learning projects. Currently preparing for software engineering roles.</p>
+    <div class="contact-row">
+      <a href="mailto:kkowsalya867@gmail.com">kkowsalya867@gmail.com</a>
+      <a href="tel:7339671863">7339671863</a>
+      <a href="https://github.com/KOWSALYA-del" target="_blank" rel="noopener">github.com/KOWSALYA-del</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Personal Expense Tracker</h3>
+        <div class="stack">Django · SQLite · Python</div>
+        <p>A web app to add, view, and delete expenses, with keyword-based auto-categorization (e.g. "Swiggy" → Food) and monthly category-wise spending summaries.</p>
+        <a href="https://github.com/KOWSALYA-del/expense_tracker" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="project">
+        <h3>Student Exam Score Predictor</h3>
+        <div class="stack">Python · Pandas · Scikit-learn</div>
+        <p>A Linear Regression model that predicts exam scores from study hours, attendance, sleep, and prior scores, achieving a 0.95 R² on test data.</p>
+        <a href="https://github.com/KOWSALYA-del/data-science-project" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <span class="skill">Python</span>
+      <span class="skill">Django</span>
+      <span class="skill">Java</span>
+      <span class="skill">C / C++</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">HTML / CSS</span>
+      <span class="skill">MySQL / SQLite</span>
+      <span class="skill">Pandas / NumPy</span>
+      <span class="skill">Scikit-learn</span>
+      <span class="skill">Git / GitHub</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="edu-item">
+      <strong>B.E. — Computer Science &amp; Engineering</strong> · CGPA 7.68/10
+      <div class="school">Excel Engineering College (Autonomous), 2024–2027 (Pursuing)</div>
+    </div>
+    <div class="edu-item">
+      <strong>Diploma — Computer Science &amp; Engineering</strong> · 82%
+      <div class="school">Annai JKK Sampooraniammal Polytechnic College, 2024</div>
+    </div>
+  </section>
+
+  <footer>
+    Tamil Nadu, India
+  </footer>
+</div>
+
+</body>
+</html>
